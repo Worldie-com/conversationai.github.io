@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Conversation AI by conversationai</title>
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=af518bf3480c988b42c311ff0c5417e7dc227dbb">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <img src="https://avatars2.githubusercontent.com/u/23317692?v=3&u=3319301a436f2b42d9c4fa89370ddc2e40c0feea" />
+        <h1>Conversation AI</h1>
+        <p>Conversation AI is a collaborative research effort exploring ML as a tool for better discussions online.</p>
+
+        
+          <p class="view"><a href="http://github.com/conversationai/conversationai.github.io">View the Project on GitHub <small></small></a></p>
+        
+
+        
+
+        
+      </header>
+      <section>
+
+      <p><a href="/">Back to Conversation AI Research Overview</a></p>
+
+<h3 id="research-resources">Research resources</h3>
+
+<p>This page outlines the high level questions we are exploring. Further related research can be found on the <a href="https://meta.wikimedia.org/wiki/Research:Detox/Resources">WikiDetox outline of related work</a>.</p>
+
+<h4 id="how-might-machine-learning-methods-help-online-conversations">How might machine learning methods help online conversations?</h4>
+
+<p>How can machine learning enable us understand harassment at scale?</p>
+
+<ul>
+  <li>Our initial research is summerized in our blog post <a href="https://medium.com/jigsaw/algorithms-and-insults-scaling-up-our-understanding-of-harassment-on-wikipedia-6cc417b9f7ff">Algorithms And Insults: Scaling Up Our Understanding Of Harassment On Wikipedia</a>.</li>
+  <li>More details can be found in our paper <a href="https://arxiv.org/abs/1610.08914">Ex Machina: Personal Attacks Seen at Scale</a> which outlines how crowdsourcing and machine learning can be used to analyze personal attacks at scale, and applies the methods to help understand the challenge on Wikipedia.</li>
+  <li>Public datasets
+    <ul>
+      <li><a href="https://figshare.com/articles/Wikipedia_Detox_Data/4054689">Wikipedia Human Annotations of Personal Attacks on Talk Pages</a>: 100k Comments from wikipedia each with 10 annotations by the 4000 annotators who contributed to the effort. Each comment annotation notes whether the annotator considers the comment to be a personal attack or not.</li>
+      <li><a href="https://figshare.com/articles/Wikipedia_Talk_Corpus/4264973">Wikipedia Machine Annotations of Talk Pages</a>: machine-labelled annotations for every English Wikipedia talk page comment from 2001 to 2015, approximately 95 million comments to support large scale data analysis.</li>
+      <li>To submit a link to an existing public dataset, or get help creating new public data sets for related research please fill out <a href="https://goo.gl/forms/z3JatRhT5x53Xa0I2">this form</a>.</li>
+      <li><a href="https://figshare.com/articles/Wikipedia_Talk_Labels_Toxicity/4563973">Wikipedia Human Annotations of Toxicity on Talk Pages</a>: 160k human labelled annotations based on asking 5000 crowd-workers to rate Wikipedia comments according to thier toxicity (likely to make others leave the conversation). Each comment was rated by 10 crowd-workers.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>What role does toxic language have in reducing the number of viewpoints in a discussion?</p>
+
+<p>What tools are needed to make robust open debate on important issues easier at scale?</p>
+
+<p>How might machine learning based tool be used by communities, commenters and authors?</p>
+
+<h4 id="what-aspects-of-a-conversation-can-machine-learning-understand">What aspects of a conversation can machine learning understand?</h4>
+
+<p>Can machine learning methods understand the emotional impact of language?</p>
+
+<p>How much of the structure of a conversation can machine learning approaches uncover?</p>
+
+<h4 id="what-are-the-risks-and-challenges-of-using-machine-learning-to-assist-online-conversations">What are the risks and challenges of using machine learning to assist online conversations?</h4>
+
+<p>What unintended and unfair biases might machine learning models contain? What impact might such biases have? What are the best ways to identify these biases? and what can be done mitigate them?</p>
+
+<ul>
+  <li>See <a href="https://research.google.com/bigpicture/attacking-discrimination-in-ml/">Attacking discrimination with smarter machine learning</a> for a great introduction to the problem. Challenges related machine learning fairness and algorithmic bias are outlined further on our <a href="/fairness.html">Fairness page</a>.</li>
+</ul>
+
+<p>How might machine learning based tool be gamed?</p>
+
+<ul>
+  <li>
+    <p>Word based models, including the CNN we developed for toxicty, can be tricked easily by creative misspellings. Using character level models can help address this, but require more data and their training suffers from <a href="https://en.wikipedia.org/wiki/Vanishing_gradient_problem">the vanishing gardient problem</a>.</p>
+  </li>
+  <li>
+    <p>Models based on character-level ngrams fed into feed-forward networks, like our TOXICITY_FAST model, can be easily gamed by adding additional ngrams after the initial comment that counter the signal from the problematic ngrams. This can be addressed by using RNNs and CNNs, like our TOXICITY model which take account of more of the textual context.</p>
+  </li>
+  <li>
+    <p>The practical impact of gaming ML models is an open research question, and is likely to depend on way the ML is applied. Moreover, there are different threat models for different applications of ML: gaming of an authorship experience is quite different to the recieving suggestions and considering retraining on them.</p>
+  </li>
+  <li>
+    <p>The research of <a href="https://arxiv.org/abs/1702.01119">Cheng et. al.</a> and <a href="https://arxiv.org/abs/1610.08914">Wulczyn et. al.</a> suggest that the majority of toxic contributions are not from people who would be incentivised to game models, but from people having a ‘bad day’.</p>
+  </li>
+</ul>
+
+<p>How might ML be misused to censor or reduce viewpoints in a conversation?</p>
+
+
+      </section>
+      <footer>
+        
+        <p>This project is maintained by <a href="http://github.com/conversationai">conversationai</a></p>
+        
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="/assets/js/scale.fix.js"></script>
+
+
+  
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-37043857-13', 'auto');
+        ga('send', 'pageview');
+    </script>
+  
+  </body>
+</html>

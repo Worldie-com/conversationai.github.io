@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Conversation AI by conversationai</title>
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=af518bf3480c988b42c311ff0c5417e7dc227dbb">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <img src="https://avatars2.githubusercontent.com/u/23317692?v=3&u=3319301a436f2b42d9c4fa89370ddc2e40c0feea" />
+        <h1>Conversation AI</h1>
+        <p>Conversation AI is a collaborative research effort exploring ML as a tool for better discussions online.</p>
+
+        
+          <p class="view"><a href="http://github.com/conversationai/conversationai.github.io">View the Project on GitHub <small></small></a></p>
+        
+
+        
+
+        
+      </header>
+      <section>
+
+      <h3 id="research-overview">Research overview</h3>
+
+<p>Our research aims to help increase participation, quality, and empathy in online conversation at scale. Our three primary areas of research are:</p>
+
+<ul>
+  <li>How might machine learning methods help online conversations?</li>
+  <li>What aspects of a conversation can machine learning understand?</li>
+  <li>What are the risks and challenges of using machine learning to assist online conversations?</li>
+</ul>
+
+<p>More further details see out <a href="/research.html">research resources page</a>.</p>
+
+<h3 id="public-datasets">Public datasets</h3>
+
+<p>One of the main challenges of machine learning research is limited availability of high quality research data to improve online discussion.  We want to change that by creating, publishing, and/or identifying high quality public data sets related to online discussion.</p>
+
+<ul>
+  <li><a href="https://figshare.com/articles/Wikipedia_Detox_Data/4054689">Wikipedia Human Annotations of Personal Attacks on Talk Pages</a>: 100k Comments from wikipedia each with 10 annotations by the 4000 annotators who contributed to the effort. Each comment annotation notes whether the annotator considers the comment to be a personal attack or not.</li>
+  <li><a href="https://figshare.com/articles/Wikipedia_Talk_Corpus/4264973">Wikipedia Machine Annotations of Talk Pages</a>: machine-labelled annotations for every English Wikipedia talk page comment from 2001 to 2015, a total of approximately 95 million comments that supports large scale data analysis.</li>
+  <li><a href="https://figshare.com/articles/Wikipedia_Talk_Labels_Toxicity/4563973">Wikipedia Human Annotations of Toxicity on Talk Pages</a>: 160k human labelled annotations based on asking 5000 crowd-workers to rate Wikipedia comments according to thier toxicity (likely to make others leave the conversation). Each comment was rated by 10 crowd-workers.</li>
+</ul>
+
+<p>To submit a link to an existing public dataset, or get help creating new public data sets for related research please fill out <a href="https://goo.gl/forms/z3JatRhT5x53Xa0I2">this form</a>.</p>
+
+<h3 id="perspective-api">Perspective API</h3>
+
+<p>The Perspective API (<a href="https://www.perspectiveapi.com/">demo</a>; <a href="https://github.com/conversationai/perspectiveapi/blob/master/README.md">API documentation</a>) serves models created by the Conversation AI research initiative to enable platforms, developers, and researchers to explore how ML might help conversations online. The API scores a comment based on its potential impact on a conversation.</p>
+
+<p>Our first alpha-version perspective is ‘toxicity’, and is only in English right now. This allows text to be scored based its similarity to comments people have said are “toxic” or likely to make them leave a conversation. The model is still far from perfect - it will make errors: it will be unable to detect patterns of toxicity it has not seen before, and it will falsely detect comments that are similar to patterns of previous toxic conversations. To help improve the machine learning, the API supports sending us suggested scores which allow the model to improve.</p>
+
+<p>We do not recommend using the API as a tool for automated moderation: the models make too many errors. We have released early access to the API to support research and allow developers, publishers and platforms to try creating new conversational experiences e.g. to help human moderators choose what to review, to help people reading comments to choose what they read, or to help authors get another perspective on what they are writing.</p>
+
+<p>As the research develops we will add new models to the API. For example, we are currently experimenting with models for unsubstantial and off-topic comments. Fore more information, see the <a href="https://github.com/conversationai/perspectiveapi/blob/master/README.md">API documentation</a>.</p>
+
+<p>If you would like to receive email updates about the API - for example when we add new models, or deprecate old ones, you can subscribe to <a href="https://groups.google.com/forum/#!forum/perspective-announce/join">perspective-announce</a>, to receive emails updates from perspective-announce@googlegroups.com. This list will be used only to share release information, and will never be used to ask you for login details.</p>
+
+<h3 id="partner-experiments">Partner experiments</h3>
+
+<ul>
+  <li><a href="https://meta.wikimedia.org/wiki/Research:Detox">Wikimedia Foundation WikiDetox Research Project</a>: aims to understand the nature of harassment and personal attacks at scale.</li>
+  <li>With the New York Times we are working with to enable moderators to more quickly review comments by clustering similar comments together. Their article <a href="https://www.nytimes.com/interactive/2016/09/20/insider/approve-or-reject-moderation-quiz.html">Approve or Reject: Can You Moderate Five New York Times Comments?</a> describes the challenges in more detail.</li>
+</ul>
+
+<h3 id="values-guiding-the-research">Values guiding the research</h3>
+
+<ul>
+  <li>Community: For the community, by the community.</li>
+  <li>Transparency: Open processes for open discussions.</li>
+  <li>Inclusivity: Diverse points of view make discussions better.</li>
+  <li>Privacy: It’s about what you say, whoever you are.</li>
+  <li>Topic-neutral: It’s about how you discuss, not what you discuss.</li>
+</ul>
+
+<h3 id="who-is-working-on-this">Who is working on this?</h3>
+
+<p>The research effort was started by <a href="https://jigsaw.google.com/">Jigsaw</a> and the Google Counter-Abuse Technology Team and welcomes contributions from anyone interested in better online conversation. If you have questions about our research, you can email us at <a href="mailto:conversationai-questions@google.com">conversationai-questions@google.com</a>.</p>
+
+<h3 id="open-source-ml-efforts-for-online-conversation">Open source ML efforts for online conversation</h3>
+
+<p>Are you building a machine learning tool for great conversation that you’d like to us to know about and link to from this page? <a href="https://goo.gl/forms/z3JatRhT5x53Xa0I2">Let us know!</a></p>
+
+<h3 id="contributing-examples-to-help-improve-online-conversation">Contributing examples to help improve online conversation</h3>
+
+<p>Do you have examples of comments (both comments you want in your community and comments you don’t want in your community) that you would like to contribute for use in research and products to improve conversations online? You can <a href="https://goo.gl/forms/d9TMWhnHB8vEzmyR2">submit examples here</a></p>
+
+
+      </section>
+      <footer>
+        
+        <p>This project is maintained by <a href="http://github.com/conversationai">conversationai</a></p>
+        
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="/assets/js/scale.fix.js"></script>
+
+
+  
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-37043857-13', 'auto');
+        ga('send', 'pageview');
+    </script>
+  
+  </body>
+</html>
